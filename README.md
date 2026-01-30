@@ -31,13 +31,13 @@ Included targets:
 - Feedback Hub (`Microsoft.WindowsFeedbackHub`)
 - Tips (`Microsoft.Getstarted`)
 
-### 2) Removes selected Appx apps (current user)
+### 2) Removes selected Appx apps
 For each selected item (except OneDrive):
 - Checks if the Appx package is installed for the current user using `Get-AppxPackage -Name <package>`
 - If found, removes it using `Remove-AppxPackage -Package <PackageFullName>`
 - If not found, logs “Not installed”
 
-### 3) Uninstalls OneDrive (special case)
+### 3) Uninstalls OneDrive
 If **OneDrive** is selected:
 - Tries to run:
   - `%SystemRoot%\System32\OneDriveSetup.exe /uninstall`
@@ -57,8 +57,8 @@ It recursively searches for keys containing the package name string and tries to
 
 ## Requirements
 
-- Windows PowerShell (or PowerShell) on Windows
-- Ability to run WinForms (normal Windows desktop session)
+- Windows PowerShell
+- Ability to run WinForms
 - Permissions:
   - Removing Appx packages usually works per-user without full admin, but some packages may fail depending on system policy
   - Registry cleanup targets HKCU (current user) only
