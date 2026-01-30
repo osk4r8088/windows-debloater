@@ -8,7 +8,8 @@ The registry cleanup is aggressive (recursive delete of matching keys under HKCU
 
 ## Disclaimer
 
-Use at your own risk. Removing built-in apps and deleting registry keys can affect system functionality. Test in a VM or on a non-critical system first.
+Use at your own risk. Removing built-in apps and deleting registry keys can affect the systems functionality. 
+Test in a VM or on a non-critical system first if unsure.
 
 ## What this script does
 
