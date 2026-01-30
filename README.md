@@ -2,9 +2,9 @@
 
 A simple PowerShell WinForms GUI to remove selected preinstalled Windows apps (Appx packages) and uninstall OneDrive. It provides a checklist UI, progress bar, and a log output box.
 
-This script removes apps for the currently logged-in user (it uses Remove-AppxPackage, not provisioning removal for new users).
-Some Windows components may not be removable or may be reinstalled by Windows updates.
-The registry cleanup is aggressive (recursive delete of matching keys under HKCU paths). Use with caution and consider removing that part if you want a safer “apps only” debloat.
+- This script removes apps for the currently logged-in user (it uses Remove-AppxPackage, not provisioning removal for new users).
+- Some Windows components may not be removable or may be reinstalled by Windows updates. (depending on the update / win version you currently have)
+- The registry cleanup is aggressive (recursive delete of matching keys under HKCU paths). Use with caution and consider removing that part if you want a safer “apps only” debloat.
 
 ## Disclaimer
 
