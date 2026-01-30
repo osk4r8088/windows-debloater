@@ -67,16 +67,19 @@ It recursively searches for keys containing the package name string and tries to
 
 1. Save the script as `debloater-gui.ps1`
 2. Open PowerShell
-3. (Optional) allow script execution for the current session:
-   ```powershell
-   Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+3. (Optional) Allow script execution for the current session:
 
+```powershell
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+Run the script:
 
-   To add or remove items, edit the $debloatItems list:
-   $debloatItems = @(
-  @{ Name = "Example"; App = "Publisher.AppName" }
+.\debloater-gui.ps1
+Customization (add/remove apps)
+Edit the $debloatItems list in the script:
+
+$debloatItems = @(
+    @{ Name = "Example"; App = "Publisher.AppName" }
 )
+To find installed package names:
 
-You can find package names with:
 Get-AppxPackage | Select Name, PackageFullName
-
