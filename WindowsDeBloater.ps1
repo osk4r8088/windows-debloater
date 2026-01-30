@@ -1,7 +1,7 @@
 ﻿Add-Type -AssemblyName System.Windows.Forms
 Add-Type -AssemblyName System.Drawing
 
-# List of apps: Display name and internal Appx package name
+# List of apps: Display name and internal Appx package names
 $debloatItems = @(
     @{ Name = "Xbox Apps"; App = "Microsoft.XboxApp" },
     @{ Name = "People"; App = "Microsoft.People" },
@@ -30,7 +30,7 @@ $label.AutoSize = $true
 $label.Location = New-Object System.Drawing.Point(10, 10)
 $form.Controls.Add($label)
 
-# Dynamic checkboxes
+# dynamic checkboxes
 $checkboxes = @()
 $y = 40
 foreach ($item in $debloatItems) {
@@ -44,7 +44,7 @@ foreach ($item in $debloatItems) {
     $y += 25
 }
 
-# Progress bar
+# progress bar
 $progressBar = New-Object System.Windows.Forms.ProgressBar
 $progressBar.Location = New-Object System.Drawing.Point(20, $y + 10)
 $progressBar.Size = New-Object System.Drawing.Size(360, 20)
@@ -88,9 +88,9 @@ $button.Add_Click({
             $uninstaller = "$env:SystemRoot\System32\OneDriveSetup.exe"
             if (Test-Path $uninstaller) {
                 Start-Process $uninstaller "/uninstall" -NoNewWindow -Wait
-                $outputBox.AppendText("✔ Removed: OneDrive`r`n")
+                $outputBox.AppendText("Removed: OneDrive`r`n")
             } else {
-                $outputBox.AppendText("⚠ OneDrive uninstaller not found.`r`n")
+                $outputBox.AppendText("OneDrive uninstaller not found.`r`n")
             }
         } else {
             $pkg = Get-AppxPackage -Name $appName -ErrorAction SilentlyContinue
@@ -116,9 +116,9 @@ $button.Add_Click({
                 } | ForEach-Object {
                     try {
                         Remove-Item -Path $_.PsPath -Recurse -Force -ErrorAction Stop
-                        $outputBox.AppendText("🧹 Registry cleaned: $($_.PsPath)`r`n")
+                        $outputBox.AppendText("Registry cleaned: $($_.PsPath)`r`n")
                     } catch {
-                        $outputBox.AppendText("⚠ Failed to clean registry: $($_.PsPath)`r`n")
+                        $outputBox.AppendText("Failed to clean registry: $($_.PsPath)`r`n")
                     }
                 }
             }
@@ -136,3 +136,4 @@ $button.Add_Click({
 $form.Topmost = $true
 $form.Add_Shown({ $form.Activate() })
 [void]$form.ShowDialog()
+
