@@ -8,7 +8,8 @@ A simple PowerShell WinForms GUI to remove selected preinstalled Windows apps an
 
 ## Disclaimer
 
-Use at your own risk. Removing built-in apps and deleting registry keys can affect the systems functionality. 
+Use at your own risk. Removing built-in apps and deleting registry keys can affect the systems functionality.
+
 Test in a VM or on a non-critical system first if unsure.
 
 ## What this script does
