@@ -1,6 +1,6 @@
 # Windows Debloater GUI (PowerShell)
 
-A simple PowerShell WinForms GUI to remove selected preinstalled Windows apps (Appx packages) and uninstall OneDrive.
+A simple PowerShell WinForms GUI to remove selected preinstalled Windows apps and uninstall OneDrive.
 
 - This script removes apps for the currently logged-in user (it uses Remove-AppxPackage, not provisioning removal for new users).
 - Some Windows components may not be removable or may be reinstalled by Windows updates. (depending on the update / win version you currently have)
