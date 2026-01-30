@@ -72,8 +72,6 @@ It recursively searches for keys containing the package name string and tries to
 ```powershell
 Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
 ```
-Run the script:
-.\debloater-gui.ps1
 
 ## Customization (add/remove apps)
 Edit the $debloatItems list in the script:
