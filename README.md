@@ -87,5 +87,3 @@ To find installed package names:
 Get-AppxPackage | Select Name, PackageFullName
 ```
 
-
-this is for my daily commit
